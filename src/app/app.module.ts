@@ -1,20 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
+import { OtherComponent } from './app.othercomponent';
+import { TitleComponent } from './components/title/title.component';
+import { HighlightDirective } from './directives/app.highlight.directive';
+import { FontColorDirective } from './directives/app.fontcolor.directive';
+import { UserService } from './services/user.service';
+import { ContactModule } from './components/contact/contact.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OtherComponent,
+    HighlightDirective,
+    FontColorDirective,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ContactModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ UserService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
