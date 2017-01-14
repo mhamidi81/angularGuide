@@ -8,6 +8,7 @@ import { HighlightDirective } from './directives/app.highlight.directive';
 import { FontColorDirective } from './directives/app.fontcolor.directive';
 import { UserService } from './services/user.service';
 import { ContactModule } from './components/contact/contact.module';
+import { AppRoutingModule } from './app-routing.module.3';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ContactModule } from './components/contact/contact.module';
   imports: [
     BrowserModule,
     ContactModule,
+    AppRoutingModule,
     HttpModule
   ],
   providers: [ UserService ],

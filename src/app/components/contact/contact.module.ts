@@ -5,6 +5,8 @@ import { HighlightDirective } from './app.highlight.directive';
 import { ContactComponent } from './contact.component';
 import { AwesomePipe } from '../../pipes/awesome.pipe';
 import { FormsModule } from '@angular/forms';
+import { ContactRoutingModule } from './contact-routing.module';
+
 
 
 @NgModule({
@@ -13,8 +15,8 @@ import { FormsModule } from '@angular/forms';
 		HighlightDirective,
 		AwesomePipe
 	],
-	imports : [ CommonModule, FormsModule ],
-	exports :      [ ContactComponent ],
+	imports : [ CommonModule, FormsModule, ContactRoutingModule ],
 	providers : [ ContactService ]
+	/*exports :      [ ContactComponent ],*/
 })
 export class ContactModule {}
