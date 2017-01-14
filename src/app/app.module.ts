@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { OtherComponent } from './app.othercomponent';
 import { TitleComponent } from './components/title/title.component';
-import { HighlightDirective } from './directives/app.highlight.directive';
+import { SharedModule } from './shared/shared.module';
 import { FontColorDirective } from './directives/app.fontcolor.directive';
 import { UserService } from './services/user.service';
 import { ContactModule } from './components/contact/contact.module';
@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module.3';
   declarations: [
     AppComponent,
     OtherComponent,
-    HighlightDirective,
     FontColorDirective,
     TitleComponent
   ],
@@ -23,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module.3';
     BrowserModule,
     ContactModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   providers: [ UserService ],
   bootstrap: [ AppComponent ]
