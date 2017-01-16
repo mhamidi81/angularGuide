@@ -7,6 +7,7 @@ import { CrisisDetailComponent }  from './crisis-detail.component';
 import { CrisisRoutingModule }    from './crisis-routing.module';
 import { CrisisService } from './crisis.service';
 
+
 @NgModule({
   imports:      [ CommonModule, FormsModule, CrisisRoutingModule ],
   declarations: [ CrisisDetailComponent, CrisisListComponent ],
