@@ -1,31 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { OtherComponent } from './app.othercomponent';
-import { TitleComponent } from './components/title/title.component';
-import { SharedModule } from './shared/shared.module';
-import { FontColorDirective } from './directives/app.fontcolor.directive';
-import { UserService } from './services/user.service';
 import { ContactModule } from './components/contact/contact.module';
 import { AppRoutingModule } from './app-routing.module.3';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    OtherComponent,
-    FontColorDirective,
-    TitleComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ContactModule,
     AppRoutingModule,
-    HttpModule,
-    SharedModule
+    CoreModule
   ],
-  providers: [ UserService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
